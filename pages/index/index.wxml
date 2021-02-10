@@ -1,0 +1,30 @@
+<view class="pyg_index">
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}">
+            <swiper-item
+            wx:for="{{swiperList}}"
+            wx:key="id"
+            >
+                <navigator>
+                    <image mode="widthFix" src="{{item.picUrl}}">
+                    </image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 导航 -->
+    <view class="index_cate">
+        <navigator
+        wx:for="{{catesList}}"
+        wx:key="id"
+        >
+            <image src="{{item.picUrl}}" mode="widthFix">
+                
+            </image>
+        </navigator>
+    </view>
+</view>
+  
